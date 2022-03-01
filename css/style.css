@@ -383,4 +383,8 @@ footer{
         font-size: 2rem
     }
 
+    .central_heading{
+        display: none;
+    }
+
 }

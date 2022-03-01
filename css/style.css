@@ -15,6 +15,26 @@ html{
     font-size: 62.5%;
 }
 
+@media only screen and (max-device-width: 768px){
+    html{
+        font-size:50%;
+    }
+}
+
+@media (max-width:641px)  {
+    html{
+        font-size:45%;
+    }
+}
+
+@media (max-width:481px)  {
+    html{
+        font-size:40%;
+    }
+}
+
+
+
 body{
     font-family: monospace;
 }
@@ -336,4 +356,31 @@ footer{
     letter-spacing: -0.005em;
     color: #FFFFFF;
     margin: 1rem 2rem 0 0;
+}
+
+#responsive_mail{
+    display: none;
+}
+
+/* media query footer  */
+
+@media (max-width:641px)  {
+    #snewdew_email{
+        display: none;
+        /* font-size: 5rem; */
+    }
+
+    #responsive_mail{
+        display: block;
+        float: left;
+        height: 3rem;
+        width: 3rem;
+        margin-left: 3rem;
+        margin-top: 0.3rem;
+    }
+
+    #snewdew_copyright{
+        font-size: 2rem
+    }
+
 }

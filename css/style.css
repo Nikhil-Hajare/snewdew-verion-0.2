@@ -364,7 +364,7 @@ footer{
 
 /* media query footer  */
 
-@media (max-width:641px)  {
+@media (max-width:768px)  {
     #snewdew_email{
         display: none;
         /* font-size: 5rem; */

@@ -33,26 +33,32 @@ html{
     }
 }
 
-
-
-body{
-    font-family: monospace;
+@media (max-width:400px)  {
+    html{
+        font-size:30%;
+    }
 }
 
-nav{
+/* ===================================================================================== */
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+/* ====================================================================================== */
+/* Primary Header with founder logo  */
+
+header{
     height: 7rem;
     width: 100%;
-    /* border: 1px solid black; */
-    /* background: rgb(233, 236, 20); */
+    position: relative;
 }
 
 .logo{
     height: 7rem;
     width: 15.5rem;
-    /* border: 1px solid red; */
     margin-left:3rem;
     float: left;
-    /* padding-top: 10px; */
 }
 
 #logo_fit{
@@ -65,46 +71,75 @@ nav{
     height: 7rem;
     width: 10rem;
     margin-right:3rem;
-    padding-bottom: 0.2rem;
-    /* border: 1px solid red; */
 }
 
 #logo_person_fit{
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-   
+    object-fit: cover;
 }
+
+.founder_info{
+    position: absolute;
+    height: 5rem;
+    width: 13rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: -13rem;
+}
+
+#founder_name{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    text-align: right;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
 
 .central_heading{
     display: block;
     width: 50rem;
     height: 7rem;
     text-align: center;
-    /* border: 1px solid red; */
-    /* float: center; */
 }
 
 p{
     background: linear-gradient(90deg, #FF4D1D 2.89%, #4065FF 110.32%);
     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
     font-size: 2rem;
     font-weight: bold;
     padding-top: 2rem;
 }
 
-/* second navbar  */
+
+
+@media (max-width:481px)  {
+    .logo_person{
+        margin-right:0rem;
+    }
+
+    .logo{
+        margin-left:0rem;
+    }
+}
+
+
+
+
+/* =================================================================================== */
+/* Main navbar  */
 
 .container{
     width: 100%;
     height: 4rem;
     display: flex;
-    box-shadow: rgb(198 208 248) 2px 15px 37px -4px;  
-    
-    
-    /* align-items: center; */
-    /* border: 1px solid black ; */
+    box-shadow: rgb(198 208 248) 2px 15px 37px -4px; 
 }
 
 
@@ -121,8 +156,6 @@ p{
     font-weight: 500;
     color: #3E3E3E;
     cursor: pointer;
-   
-    /* align-self: center; */
 }
 .selected_item{
     background-color: #4065FF;

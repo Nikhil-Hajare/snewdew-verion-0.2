@@ -469,9 +469,9 @@ nav{
     font-size: 1.8rem;
     font-weight: 500;
     font-family: 'Inter', sans-serif;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    letter-spacing: 1px;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    letter-spacing: 0.1rem;
     transition: all 0.3s ease;
   }
   nav ul li a.active,

@@ -120,6 +120,8 @@ p{
 
 .central_heading_mobile{
     display: none;
+    width: 100%;
+    height: 7rem;
 }
 
 
@@ -546,28 +548,16 @@ nav{
       background: none;
       color: #000000;
     }
+    .central_heading_mobile{
+        display: block;
+        width: 100%;
+        height: 7rem;
+    }
+  
   }
-  .content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: -1;
-    width: 100%;
-    padding: 0 2rem;
-    color: #1b1b1b;
-  }
-  .content div{
-    font-size: 4rem;
-    font-weight: 700;
-  }
+  
 
 
   /* =========================================================================================== */
-
-  .central_heading_mobile{
-      display: block;
-      width: 100%;
-      height: 7rem;
-  }
+ 
+  

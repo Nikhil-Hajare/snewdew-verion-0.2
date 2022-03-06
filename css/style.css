@@ -461,15 +461,15 @@ nav{
     list-style: none;
   }
   nav ul li{
-    margin: 0 5px;
+    margin: 0 0.5rem;
   }
   nav ul li a{
     color: #f2f2f2;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
     font-family: 'Inter', sans-serif;
-    padding: 8px 15px;
+    padding: 0.8rem 1.5rem;
     border-radius: 5px;
     letter-spacing: 1px;
     transition: all 0.3s ease;
@@ -518,7 +518,7 @@ nav{
     }
     nav ul li{
       width: 100%;
-      margin: 40px 0;
+      margin: 4rem 0;
     }
     nav ul li a{
       width: 100%;
@@ -544,10 +544,10 @@ nav{
     text-align: center;
     z-index: -1;
     width: 100%;
-    padding: 0 30px;
+    padding: 0 2rem;
     color: #1b1b1b;
   }
   .content div{
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 700;
   }

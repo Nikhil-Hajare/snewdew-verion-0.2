@@ -108,7 +108,7 @@ header {
   text-align: center;
 }
 
-p {
+.marquee_text {
   background: linear-gradient(90deg, #ff4d1d 2.89%, #4065ff 110.32%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -121,6 +121,8 @@ p {
   display: none;
   width: 100%;
   height: 7rem;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 @media (max-width: 600px) {
@@ -457,7 +459,7 @@ footer {
 /* navbar for mobile view  */
 nav {
   display: flex;
-  height: 6rem;
+  height: 7rem;
   width: 100%;
   background: #ffdcbe;
   align-items: center;
@@ -468,7 +470,7 @@ nav {
 
 nav .logo {
   color: #3e3e3e;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 500;
   line-height: 6rem;
   font-family: "Inter", sans-serif;
@@ -500,7 +502,7 @@ nav ul li a:hover {
 }
 nav .menu-btn i {
   color: rgb(0, 0, 0);
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   cursor: pointer;
   display: none;
 }
@@ -524,7 +526,7 @@ input[type="checkbox"] {
   }
   nav ul {
     position: fixed;
-    top: 13rem;
+    top: 14rem;
     left: -100%;
     background: #4065ff;
     height: 100vh;
@@ -562,6 +564,15 @@ input[type="checkbox"] {
     width: 100%;
     height: 7rem;
     z-index: 1;
+  }
+
+  .marquee_text_mobile {
+    background: linear-gradient(90deg, #ff4d1d 2.89%, #4065ff 110.32%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-top: 2rem;
   }
 }
 
@@ -620,6 +631,7 @@ input[type="checkbox"] {
     width: 100%;
     border-radius: 0.5rem;
     display: none;  
+    z-index: 1;
 }
 
 [id^=btn]:checked + ul{

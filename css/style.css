@@ -656,14 +656,15 @@ footer {
 }
 
 #responsive_mail {
-  display: inline-block;
+  display: block;
   float: left;
   height: 4rem;
   width: 4rem;
   margin-left: 3rem;
-  /* margin-top: 1rem; */
   vertical-align: middle;
+  cursor: pointer; 
 }
+
 
 #snewdew_copyright {
   font-size: 3.5rem;

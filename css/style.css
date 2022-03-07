@@ -576,9 +576,9 @@ input[type="checkbox"] {
 /* Dropdown menu for mobile and tablet  */
 @media (max-width: 873px) {
 
-  *{
+  /* *{
     overflow: scroll;
-  }
+  } */
   #dropdown_mobile_view {
     position: relative;
     display: block;
@@ -638,6 +638,7 @@ input[type="checkbox"] {
 footer {
   height: 8rem;
   position: fixed;
+  z-index: 1;
 }
 #snewdew_email {
   display: none;

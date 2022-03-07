@@ -680,7 +680,6 @@ footer {
    min-height:100vh ;
    margin: auto;
    border-radius: 0.5rem;
-   border: 1px solid red;
   }
 
   .hero_content_heading {

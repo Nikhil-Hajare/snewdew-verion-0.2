@@ -101,6 +101,13 @@ header {
   font-weight: 600;
 }
 
+#founder_heading{
+  font-size: 1.4rem;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 550;
+}
+
 .central_heading {
   display: block;
   width: 55rem;
@@ -385,6 +392,7 @@ span {
   display: inline-block;
   vertical-align: middle;
   margin-left: 0.5rem;
+  
 }
 
 #hero_item3 {
@@ -639,6 +647,8 @@ footer {
   height: 8rem;
   position: fixed;
   z-index: 1;
+  display: flex;
+  align-items: center;
 }
 #snewdew_email {
   display: none;
@@ -646,17 +656,19 @@ footer {
 }
 
 #responsive_mail {
-  display: block;
+  display: inline-block;
   float: left;
   height: 4rem;
   width: 4rem;
   margin-left: 3rem;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+  vertical-align: middle;
 }
 
 #snewdew_copyright {
   font-size: 3.5rem;
-  line-height: 8rem;
+  position: absolute;
+  right: 0;
 }
 
 

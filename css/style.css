@@ -125,6 +125,26 @@ p{
 }
 
 
+@media (max-width: 600px){
+    header{
+        height: 9rem;
+    }
+
+    .logo{
+        height: 9rem;
+    }
+
+    .logo_person{
+        height: 9rem;
+    }
+
+    .founder_info{
+        height: 9rem;
+    }
+
+
+}
+
 
 
 
@@ -538,7 +558,7 @@ nav{
       width: 100%;
       margin-left: -100%;
       display: block;
-      font-size: 3rem;
+      font-size: 2rem;
       transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
     #click:checked ~ ul li a{
@@ -557,6 +577,25 @@ nav{
     }
   
   }
+
+  @media (max-width: 600px){
+
+    nav{
+        height: 8rem;
+      }
+      nav .logo{
+        line-height: 8rem;
+        font-size: 3rem;
+      }
+      nav ul{
+        top: 17rem;
+      }
+    nav ul li a{
+        font-size: 3rem;
+      } 
+  }
+
+
   
  
   

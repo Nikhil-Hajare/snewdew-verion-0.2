@@ -150,6 +150,7 @@ header {
 
   .logo {
     margin-left: 0rem;
+    overflow: hidden;
   }
 }
 
@@ -619,7 +620,6 @@ input[type="checkbox"] {
   }
 
   .menu_li {
-    /* line-height: 4rem; */
     border-bottom: 1px solid rgba(0, 0, 0, 0.13);
   }
 
@@ -654,6 +654,7 @@ footer {
 
 #snewdew_copyright {
   font-size: 3.5rem;
+  line-height: 8rem;
 }
 
 

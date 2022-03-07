@@ -434,7 +434,7 @@ footer {
 
 @media (max-width: 641px) {
   footer {
-    height: 5rem;
+    height: 8rem;
   }
   #snewdew_email {
     display: none;
@@ -444,14 +444,14 @@ footer {
   #responsive_mail {
     display: block;
     float: left;
-    height: 3rem;
-    width: 3rem;
+    height: 4rem;
+    width: 4rem;
     margin-left: 3rem;
-    margin-top: 0.8rem;
+    margin-top: 1rem;
   }
 
   #snewdew_copyright {
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
 }
 

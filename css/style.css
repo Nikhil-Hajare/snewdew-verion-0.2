@@ -232,15 +232,15 @@ header {
   }
 }
 
-#dropdown_mobile_view{
-    height: 15rem;
-    width: 100%;
-    background: #ffdcbe;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    display: none;
-  }
+#dropdown_mobile_view {
+  height: 15rem;
+  width: 100%;
+  background: #ffdcbe;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: none;
+}
 
 /* ======================================================================= */
 /* Main section  */
@@ -596,8 +596,8 @@ input[type="checkbox"] {
 
 /* ====================================================================================================== */
 /* Dropdown menu for mobile and tablet  */
-@media (max-width: 873px){
-#dropdown_mobile_view{
+@media (max-width: 873px) {
+  #dropdown_mobile_view {
     position: relative;
     display: block;
     text-align: center;
@@ -606,52 +606,117 @@ input[type="checkbox"] {
     padding: 0 4rem 0 5rem;
     width: 97%;
     margin: auto;
-    background-color: #F48020;
+    background-color: #f48020;
     border-radius: 0.5rem;
-}
+  }
 
-.dropdown_button{
+  .dropdown_button {
     font-size: 3rem;
     font-family: "Rajdhani", sans-serif;
     font-style: normal;
-    font-weight:lighter;
+    font-weight: lighter;
     color: #ffffff;
     display: block;
-}
+  }
 
-.dropdown_button span{
+  .dropdown_button span {
     margin-left: 3rem;
-}
+  }
 
-.menu{
+  .menu {
     background-color: #4065ff;
     position: absolute;
     top: 8rem;
     left: 0;
     width: 100%;
     border-radius: 0.5rem;
-    display: none;  
+    display: none;
     z-index: 1;
-}
+  }
 
-[id^=btn]:checked + ul{
+  [id^="btn"]:checked + ul {
     display: block;
+  }
 
-}
-
-.menu_li{
+  .menu_li {
     /* line-height: 4rem; */
-    border-bottom:1px solid rgba(0, 0, 0, 0.13);
-}
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+  }
 
-.menu_li_a{
+  .menu_li_a {
     font-family: "Rajdhani", sans-serif;
     color: #ffffff;
     line-height: 7rem;
     padding: 0;
     font-size: 3rem;
     display: block;
-}
+  }
+/* ================================================================================================== */
+/* media query styling for hero content */
+  .hero_content {
+    width: 100%;
+    /* min-height:100vh; */
+    display: block;
+    margin-top: 1.2rem;
+  }
+
+  #hero_item1 {
+    display: none;
+  }
+
+  #hero_item3{
+      display: none;
+  }
+
+  #hero_item2 {
+   display: block;
+   width: 97%;
+   min-height:auto ;
+   margin: auto;
+   border-radius: 0.5rem;
+   border: 1px solid red;
+  }
+
+  .hero_content_heading {
+    display: none;
+  }
+
+  .hero_content_innerContent {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0 2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 3rem;
+  }
+
+  .hero_content_innterContent_text {
+    font-size: 2.5rem;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+  }
+
+  .view_pdf_button {
+    height: 5.5rem;
+    width: 17rem;
+  }
+  
+  #pdf_icon {
+    height: 3rem;
+    width: 3rem;
+  }
+  
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-size: 2rem;
+  }
 
 
+  
 }

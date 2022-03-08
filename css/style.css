@@ -334,14 +334,6 @@ header {
   position: relative;
 }
 
-#center_red_heading{
-  color: rgb(247, 46, 46);
-  font-size: 2rem;
-  padding-top: 5rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
-}
-
 .hero_content_heading {
   width: 100%;
   background-color: #4065ff;
@@ -377,8 +369,8 @@ header {
   font-style: normal;
   font-weight: normal;
   color: #000000;
-  margin-left:5rem;
-  margin-right: 5rem;
+  /* margin-left:5rem;
+  margin-right: 5rem; */
 }
 
 .view_pdf_button {
@@ -597,9 +589,6 @@ input[type="checkbox"] {
 /* ====================================================================================================== */
 /* Dropdown menu for mobile and tablet  */
 @media (max-width: 873px) {
-  #center_red_heading{
-    font-size: 3.5rem;
-  }
   #dropdown_mobile_view {
     position: relative;
     display: block;
@@ -711,7 +700,22 @@ footer {
   }
 
   .hero_content_heading {
-    display: none;
+      width: 100%;
+      background-color: #4065ff;
+      height: 20%;
+      display: flex;
+      align-items: center;
+      padding-left: 3rem;
+    }
+
+    .hero_content_heading_h1 {
+      color: #ffffff;
+      font-size: 3rem;
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+    }
   }
 
   .hero_content_innerContent {

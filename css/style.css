@@ -145,10 +145,6 @@ header {
   .logo_person {
     height: 9rem;
   }
-
-  .founder_info {
-    display: none;
-  }
 }
 
 @media (max-width: 481px) {
@@ -237,6 +233,10 @@ header {
   }
 
   .central_heading {
+    display: none;
+  }
+
+  .founder_info {
     display: none;
   }
 }

@@ -88,6 +88,7 @@ header {
   top: 50%;
   transform: translateY(-50%);
   margin-left: -13rem;
+  display: block;
 }
 
 #founder_name {
@@ -146,7 +147,7 @@ header {
   }
 
   .founder_info {
-    height: 9rem;
+    display: none;
   }
 }
 

@@ -238,6 +238,10 @@ header {
   .founder_info {
     height: 8rem;
   }
+
+  #founder_name {
+    font-size: 1.6rem;
+  }
 }
 
 #dropdown_mobile_view {

@@ -365,6 +365,8 @@ header {
   font-style: normal;
   font-weight: normal;
   color: #000000;
+  margin-left:5rem;
+  margin-right: 5rem;
 }
 
 .view_pdf_button {
@@ -667,7 +669,7 @@ footer {
 
 
 #snewdew_copyright {
-  font-size: 3.5rem;
+  font-size:2.8rem;
   position: absolute;
   right: 0;
 }

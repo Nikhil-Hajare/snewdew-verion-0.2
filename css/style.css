@@ -56,6 +56,7 @@ header {
   height: 7rem;
   width: 100%;
   position: relative;
+  /* position: fixed; */
 }
 
 .logo {
@@ -417,6 +418,7 @@ footer {
   max-height: -webkit-fill-available;
   width: 100%;
   background: #3e3e3e;
+ 
 }
 
 #snewdew_email {
@@ -509,6 +511,7 @@ input[type="checkbox"] {
 /* media query for navbar max-width:  873px)  */
 @media (max-width: 873px) {
   nav {
+    /* position: fixed; */
     display: flex;
     padding: 0 4rem 0 4rem;
     overflow: hidden!important;
@@ -587,6 +590,7 @@ input[type="checkbox"] {
   nav ul li a {
     font-size: 3rem;
   }
+
 }
 
 /* ====================================================================================================== */
@@ -651,7 +655,7 @@ input[type="checkbox"] {
 footer {
   height: 8rem;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: center;
 }

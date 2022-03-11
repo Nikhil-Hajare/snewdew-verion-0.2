@@ -169,12 +169,12 @@ header {
   min-width: 100%;
   height: 4rem;
   display: flex;
+  
   box-shadow: rgb(198 208 248) 2px 15px 37px -4px;
 }
 
 .item {
   background-color: #ffdcbe;
-  /* border: 1px solid black; */
   margin: 0.1rem;
   padding: 1rem;
   width: 20rem;

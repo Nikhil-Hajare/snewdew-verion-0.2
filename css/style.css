@@ -529,7 +529,7 @@ input[type="checkbox"] {
   }
   #click:checked ~ .menu-btn i:before {
     content: "\f00d";
-    line-height :8.5rem;
+    line-height :9.5rem;
   }
   nav ul {
     position: fixed;

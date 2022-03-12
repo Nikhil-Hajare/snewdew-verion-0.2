@@ -719,8 +719,8 @@ footer {
 #responsive_mail {
   display: block;
   float: left;
-  height: 4.5vh;
-  width:4.5vw;
+  height: 5vh;
+  width:5vw;
   margin-left: 3rem;
   vertical-align: middle;
   cursor: pointer; 

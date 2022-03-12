@@ -124,6 +124,8 @@ header {
 .marquee{
   display: block;
   position: absolute;
+  right: 0;
+  left:0;
   overflow: hidden;
   white-space: nowrap;
   margin: auto auto;
@@ -160,15 +162,6 @@ header {
   }
   
 }
-
-/* .marquee_text {
-  background: linear-gradient(90deg, #ff4d1d 2.89%, #4065ff 110.32%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2rem;
-  font-weight: bold;
-  padding-top: 2rem;
-} */
 
 .central_heading_mobile {
   display: none;
@@ -760,8 +753,8 @@ footer {
   }
 
   .view_pdf_button {
-    height: 5.5rem;
-    width: 17rem;
+    height: 5rem;
+    width: 16rem;
   }
   
   #pdf_icon {
@@ -811,5 +804,17 @@ footer {
   @media screen and (min-width: 1900px) {
     .container {
       width: 1870px;
+    }
+  }
+
+  @media only screen and (min-width:481px ) and (max-device-width: 873px  ){
+    #hero_item2{
+      min-height: 150vh;
+    }
+  }
+
+  @media only screen and (min-width:746px ) and (max-device-width: 873px  ){
+    #hero_item2{
+      min-height: 180vh;
     }
   }

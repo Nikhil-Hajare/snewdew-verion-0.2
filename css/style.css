@@ -702,9 +702,9 @@ input[type="checkbox"] {
   /* ================================================================================================== */
 /* media query for footer */
 footer {
-  height: 8rem;
+  height: 5vh;
   position: fixed;
-  z-index: 2;
+  /* z-index: 2; */
   display: flex;
   align-items: center;
 }

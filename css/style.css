@@ -378,12 +378,9 @@ header {
   flex: 2 2 150rem;
   margin: 0 1rem 1.5rem 1rem;
   position: relative;
-  overflow-y: scroll;
+  overflow: scroll!important;
 }
 
-#hero_item2::-webkit-scrollbar {
-  display: none;
-}
 
 #flex_center_heading{
   color: #ffffff;
@@ -716,8 +713,8 @@ footer {
 #responsive_mail {
   display: block;
   float: left;
-  height: 4rem;
-  width: 4rem;
+  height: 3vh;
+  width:3vw;
   margin-left: 3rem;
   vertical-align: middle;
   cursor: pointer; 

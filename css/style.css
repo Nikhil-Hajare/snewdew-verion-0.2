@@ -380,7 +380,11 @@ header {
   flex: 2 2 150rem;
   margin: 0 1rem 1.5rem 1rem;
   position: relative;
-  overflow: scroll!important;
+  overflow-y: scroll!important;
+}
+
+#hero_item2::-webkit-scrollbar{
+  display: none;
 }
 
 

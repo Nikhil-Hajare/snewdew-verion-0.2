@@ -115,10 +115,9 @@ header {
 .central_heading {
   display: block;
   position: relative;
-  width: 80rem;
+  width: 50vw;
   height: 7rem;
   text-align: center;
-  /* border: 1px solid red; */
 }
 
 .marquee{
@@ -144,7 +143,7 @@ header {
   background: linear-gradient(90deg, #ff4d1d 2.89%, #4065ff 110.32%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2rem;
+  font-size:2rem;
   font-weight: 900;
   animation: marquee 10s linear infinite;
 }
@@ -379,6 +378,11 @@ header {
   flex: 2 2 150rem;
   margin: 0 1rem 1.5rem 1rem;
   position: relative;
+  overflow-y: scroll;
+}
+
+#hero_item2::-webkit-scrollbar {
+  display: none;
 }
 
 #flex_center_heading{
@@ -548,7 +552,6 @@ input[type="checkbox"] {
     /* position: fixed; */
     display: flex;
     padding: 0 4rem 0 4rem;
-    overflow: hidden!important;
   }
   nav .menu-btn i {
     display: block;
@@ -747,9 +750,14 @@ footer {
   #hero_item2 {
    display: block;
    width: 97%;
-   min-height:100vh ;
+   min-height:120vh ;
    margin: auto;
    border-radius: 0.5rem;
+   overflow-y: scroll;
+  }
+  
+  #hero_item2::-webkit-scrollbar {
+    display: scroll;
   }
 
   .view_pdf_button {
@@ -807,7 +815,7 @@ footer {
     }
   }
 
-  @media only screen and (min-width:481px ) and (max-device-width: 873px  ){
+  /* @media only screen and (min-width:481px ) and (max-device-width: 873px  ){
     #hero_item2{
       min-height: 150vh;
     }
@@ -817,4 +825,4 @@ footer {
     #hero_item2{
       min-height: 180vh;
     }
-  }
+  } */

@@ -94,54 +94,55 @@
     </label>
     <input type="checkbox" id="btn" />
     <ul class="menu">
-      <li class="menu_li"><a href="#" class="menu_li_a">POLITY</a></li>
+      <li class="menu_li"><a href="#" class="menu_li_a" side-section-mobile>SCIENCE OF GOVERNANCE</a></li>
+      <li class="menu_li"><a href="#" class="menu_li_a" side-section-mobile>POLITY</a></li>
       <li class="menu_li">
-        <a href="#" class="menu_li_a">LAW AND JURISPRUDENCE</a>
+        <a href="#" class="menu_li_a" side-section-mobile>LAW AND JURISPRUDENCE</a>
       </li>
       <li class="menu_li">
-        <a href="#" class="menu_li_a">SOVEREIGNTY AND SURVIVAL</a>
+        <a href="#" class="menu_li_a" side-section-mobile>SOVEREIGNTY AND SURVIVAL</a>
       </li>
-      <li class="menu_li"><a href="#" class="menu_li_a">LAW AND ORDER</a></li>
+      <li class="menu_li"><a href="#" class="menu_li_a" side-section-mobile>LAW AND ORDER</a></li>
       <li class="menu_li">
-        <a href="#" class="menu_li_a">GANGAJAL ECONOMICS</a>
-      </li>
-      <li class="menu_li">
-        <a href="#" class="menu_li_a">MONEY MANAGEMENT</a>
+        <a href="#" class="menu_li_a" side-section-mobile>GANGAJAL ECONOMICS</a>
       </li>
       <li class="menu_li">
-        <a href="#" class="menu_li_a">FISCAL MANAGEMENT</a>
+        <a href="#" class="menu_li_a" side-section-mobile>MONEY MANAGEMENT</a>
       </li>
       <li class="menu_li">
-        <a href="#" class="menu_li_a">OTHER POLICIES</a>
+        <a href="#" class="menu_li_a" side-section-mobile>FISCAL MANAGEMENT</a>
       </li>
       <li class="menu_li">
-        <a href="#" class="menu_li_a">SOCIAL SECURITY</a>
+        <a href="#" class="menu_li_a" side-section-mobile>OTHER POLICIES</a>
       </li>
       <li class="menu_li">
-        <a href="#" class="menu_li_a">INFRASTRUCTURE</a>
+        <a href="#" class="menu_li_a" side-section-mobile>SOCIAL SECURITY</a>
       </li>
       <li class="menu_li">
-        <a href="#" class="menu_li_a">EDUCATION AND RESEARCH</a>
-      </li>
-      <li class="menu_li"><a href="#" class="menu_li_a">HEALTHCARE</a></li>
-      <li class="menu_li">
-        <a href="#" class="menu_li_a">POPULATION MANAGEMENT</a>
-      </li>
-      <li class="menu_li"><a href="#" class="menu_li_a">JOB CREATION</a></li>
-      <li class="menu_li">
-        <a href="#" class="menu_li_a">OTHER STATE FUNCTIONS</a>
+        <a href="#" class="menu_li_a" side-section-mobile>INFRASTRUCTURE</a>
       </li>
       <li class="menu_li">
-        <a href="#" class="menu_li_a">CORPORATE GOVERNANCE</a>
+        <a href="#" class="menu_li_a" side-section-mobile>EDUCATION AND RESEARCH</a>
+      </li>
+      <li class="menu_li"><a href="#" class="menu_li_a" side-section-mobile>HEALTHCARE</a></li>
+      <li class="menu_li">
+        <a href="#" class="menu_li_a" side-section-mobile>POPULATION MANAGEMENT</a>
+      </li>
+      <li class="menu_li"><a href="#" class="menu_li_a" side-section-mobile>JOB CREATION</a></li>
+      <li class="menu_li">
+        <a href="#" class="menu_li_a" side-section-mobile>OTHER STATE FUNCTIONS</a>
       </li>
       <li class="menu_li">
-        <a href="#" class="menu_li_a">ACCOUNTABILITY AND REVIEW</a>
+        <a href="#" class="menu_li_a" side-section-mobile>CORPORATE GOVERNANCE</a>
       </li>
       <li class="menu_li">
-        <a href="#" class="menu_li_a">INTERNATIONAL RELATIONS</a>
+        <a href="#" class="menu_li_a" side-section-mobile>ACCOUNTABILITY AND REVIEW</a>
       </li>
       <li class="menu_li">
-        <a href="#" class="menu_li_a">INTO THE FUTURE</a>
+        <a href="#" class="menu_li_a" side-section-mobile>INTERNATIONAL RELATIONS</a>
+      </li>
+      <li class="menu_li">
+        <a href="#" class="menu_li_a" side-section-mobile>INTO THE FUTURE</a>
       </li>
     </ul>
   </div>
@@ -197,7 +198,7 @@
         reverse the process.
       </h4><br>
 
-      <button class="view_pdf_button">
+      <button class="view_pdf_button" onclick="toggle_pdf_view()">
         <img id="pdf_icon" src="assets/Vector.svg" alt="">
         <span>View PDF</span>
       </button>
@@ -242,6 +243,29 @@
         alt="snewdew mail" /></a>
     <h6 id="snewdew_copyright">© SNEDEW Governomics</h6>
   </footer>
+
+   <!-- PDF Viewer section  -->
+   <div class="pdf_viwer">
+    <div class="top_bar">
+      <div class="snedew_img">
+        <img src="./assets/logo.png" alt="SNEDEW" class="img_iocn" />
+      </div>
+      <div class="page_info">
+        <span id="current_page">1</span>/
+        <span id="total_pages">10</span>
+      </div>
+      <div class="buttons">
+        <button id="prev-page" class="pg_btn">Prev</button>
+        <button id="next-page" class="pg_btn">Next</button>
+        <button class="pg_btn" onclick="toggle_pdf_view()">X</button>
+      </div>
+    </div>
+    <center>
+      <canvas id="pdfRederer"></canvas>
+    </center>
+  </div>
+
+  <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
 
   <script src="./js/script.js"></script>
   <script src="https://kit.fontawesome.com/2abc0d0fd4.js" crossorigin="anonymous"></script>

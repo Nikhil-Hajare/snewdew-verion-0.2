@@ -30,6 +30,23 @@ window.onload = () => {
         });
     }
 
+    // ====================================================
+
+    const mobile_side_sections = document.querySelectorAll('[side-section-mobile]');
+    console.log(mobile_side_sections)
+    for (let i = 0; i < mobile_side_sections.length; i++) {
+        const data = mobile_side_sections[i].innerHTML 
+
+        mobile_side_sections[i].addEventListener('click', () => {
+            console.log(data)
+
+            current_selected = document.querySelector('.selected_section')
+            const selected_mobile_section = document.querySelector('.dropdown_button')
+            selected_mobile_section.innerHTML = data.toUpperCase() + '<span class="fas fa-caret-down"></span>'
+            SwitchPage(data);
+        });
+    }
+
 
 
     //For nav Items: 
@@ -195,3 +212,18 @@ function toggle_pdf_view() {
     }
 
 }
+
+
+// Mobile menu scroll off 
+let menu_on = false
+function disableScroll() {
+  if (!menu_on) {
+   document.body.style.overflow = 'hidden';
+   menu_on = true
+   console.log("false")
+  } else {
+   document.body.style.overflow = 'scroll';
+   menu_on = false
+   console.log("true")
+  }
+ }

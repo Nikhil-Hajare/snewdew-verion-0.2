@@ -818,14 +818,74 @@ footer {
     }
   }
 
-  /* @media only screen and (min-width:481px ) and (max-device-width: 873px  ){
-    #hero_item2{
-      min-height: 150vh;
-    }
-  }
+ /* ================================================================================================== */
+/* pdf viewerPart */
+*{
+  margin: 0px;
+}
 
-  @media only screen and (min-width:746px ) and (max-device-width: 873px  ){
-    #hero_item2{
-      min-height: 180vh;
-    }
-  } */
+.top_bar{
+  background-color: white;
+  box-shadow: 0px 5px 10px rgb(212, 212, 212);
+  z-index: 1;
+  margin-top: 0px;
+  margin-left: 0;
+  margin-right: 0px;
+  width: 100%;
+  padding: 5px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pg_btn{
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  width: 70px;
+  height: 30px;
+  padding: 2px;
+}
+.buttons{
+  margin-right: 20px;
+}
+.snedew_img{
+  max-width: 50px;
+  max-height: 50px;
+}
+.img_iocn{
+  max-width: 50px;
+  max-height: 50px;
+
+}
+#pdfRederer{
+  z-index: -1;
+  width: 100%;
+  max-width: fit-content;
+  overflow: scroll;
+}
+
+@media screen and (max-width: 500px){
+  .top_bar{
+      box-shadow: 0px -5px 10px rgb(212, 212, 212);
+      margin-bottom: 0px;
+
+  }
+  .pg_btn{
+  width: 20px;
+  height: 10px;
+  padding: 2px;
+  font-weight: 5px;
+}
+}
+.pdf_viwer{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  overflow: scroll;
+  transition: 1s;
+  bottom: -100%;
+}

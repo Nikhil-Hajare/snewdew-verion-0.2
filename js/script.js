@@ -37,3 +37,17 @@ window.onload = () => {
         });
     }
 }
+
+// Mobile menu scroll off 
+let menu_on = false
+function disableScroll() {
+  if (!menu_on) {
+   document.body.style.overflow = 'hidden';
+   menu_on = true
+   console.log("false")
+  } else {
+   document.body.style.overflow = 'scroll';
+   menu_on = false
+   console.log("true")
+  }
+ }

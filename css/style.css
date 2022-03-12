@@ -46,7 +46,7 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  height: 100vh;
+  max-height: 100vh;
 }
 
 /* ====================================================================================== */
@@ -345,7 +345,6 @@ header {
   color: #ffffff;
   font-size: 1.7vw;
   font-family: "Inter", sans-serif;
-  /* font-family: "Rajdhani", sans-serif; */
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
@@ -355,11 +354,41 @@ header {
 
 .hero_content_innterContent_text{
   display: block;
-  /* border: 1px solid green; */
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 550;
   width: 90%;
   margin: auto;
-  font-size: 2vw;
+  font-size: 1.2vw;
 }
+
+.view_pdf_button {
+  height: 4rem;
+  width: 14rem;
+  margin-left: 4rem;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #4065ff;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+#pdf_icon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2rem;
+  width: 2rem;
+}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+} 
 
 /* .hero_content_heading {
   width: 100%;
@@ -682,6 +711,15 @@ input[type="checkbox"] {
     display: block;
   }
 
+  #flex_center_heading{
+    font-size: 3vw;
+  }
+  
+  .hero_content_innterContent_text{
+    font-size: 3.5vw;
+  }
+
+
   /* ================================================================================================== */
 /* media query for footer */
 footer {
@@ -738,44 +776,6 @@ footer {
    border-radius: 0.5rem;
   }
 
-  .hero_content_heading {
-      width: 100%;
-      background-color: #4065ff;
-      height: 20%;
-      display: flex;
-      align-items: center;
-      padding-left: 3rem;
-    }
-
-    .hero_content_heading_h1 {
-      color: #ffffff;
-      font-size: 3rem;
-      font-family: "Inter", sans-serif;
-      font-style: normal;
-      font-weight: bold;
-      letter-spacing: 0.1rem;
-    }
-  }
-
-  .hero_content_innerContent {
-    display: block;
-    width: 100%;
-    height: auto;
-    padding: 0 2rem;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 3rem;
-  }
-
-  .hero_content_innterContent_text {
-    font-size: 1.6rem;
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: #000000;
-  }
-
   .view_pdf_button {
     height: 5.5rem;
     width: 17rem;
@@ -792,23 +792,12 @@ footer {
     margin-left: 0.5rem;
     font-size: 2rem;
   }
+}
 
 
   @media screen and (min-height: 1148px) {
     .central_heading{
       width: 50rem;
-    }
-
-    .hero_content_innterContent_text {
-      font-size: 2rem;
-    }
-
-    .hero_content_innerContent {
-      top: 7rem;
-    }
-
-    .hero_content_heading {
-      height: 8%;
     }
 
     .hero_content_heading_h1 {

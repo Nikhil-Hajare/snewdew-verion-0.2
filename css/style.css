@@ -338,15 +338,37 @@ header {
   flex: 2 2 150rem;
   margin: 0 1rem 1.5rem 1rem;
   position: relative;
+  /* border: 1px solid red; */
 }
 
-.hero_content_heading {
+#flex_center_heading{
+  color: #ffffff;
+  font-size: 1.7vw;
+  font-family: "Inter", sans-serif;
+  /* font-family: "Rajdhani", sans-serif; */
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #4065ff;
+  padding: 2rem;
+}
+
+.hero_content_innterContent_text{
+  display: block;
+  /* border: 1px solid green; */
+  width: 90%;
+  margin: auto;
+  font-size: 2vw;
+}
+
+/* .hero_content_heading {
   width: 100%;
   background-color: #4065ff;
   height: 12%;
   display: flex;
   align-items: center;
   padding-left: 3rem;
+  border: 1px solid red;
 }
 
 .hero_content_heading_h1 {
@@ -375,8 +397,6 @@ header {
   font-style: normal;
   font-weight: normal;
   color: #000000;
-  /* margin-left:5rem;
-  margin-right: 5rem; */
 }
 
 .view_pdf_button {
@@ -405,7 +425,7 @@ span {
   vertical-align: middle;
   margin-left: 0.5rem;
   
-}
+} */
 
 #hero_item3 {
   flex: 2 2 45rem;

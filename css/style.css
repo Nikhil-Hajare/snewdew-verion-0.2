@@ -399,6 +399,12 @@ header {
   font-size: 1.1vw;
 }
 
+.hero_content_innterContent_text a{
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+
 .hero_content_innterContent_text ul li {
   list-style: disc;
   margin-left: 30px;
@@ -424,6 +430,29 @@ header {
   position: relative;
   cursor: pointer;
   margin-left: 6vw;
+}
+.view_pdf_button a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.view_pdf_button2 {
+  height: 4.5rem;
+  width: 15rem;
+  margin-bottom: 8rem;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #4065ff;
+  color: #ffffff;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+.view_pdf_button2 a{
+  color: inherit;
+  text-decoration: none;
 }
 
 #pdf_icon {
@@ -456,13 +485,15 @@ footer {
 
 #MIG {
   display: block;
+  float: left;
   font-family: "Inter", sans-serif;
   font-style: normal;
-  font-weight: 200;
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 1.2rem;
   line-height: 3rem;
   letter-spacing: -0.005em;
   color: #ffffff;
+  margin-left: 1.5rem;
   /* background-image: linear-gradient(
     to right,
     #d3af7a 0%,
@@ -476,13 +507,13 @@ footer {
   
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
-  position: fixed;
-  left: 45%;
+
 }
 
 #snewdew_email {
   display: block;
-  float: left;
+  position: fixed;
+  left: 40%;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 200;
@@ -490,7 +521,7 @@ footer {
   line-height: 3rem;
   letter-spacing: -0.005em;
   color: #ffffff;
-  margin-left: 1.5rem;
+  
 }
 
 #snewdew_copyright {
@@ -803,6 +834,12 @@ input[type="checkbox"] {
     margin-left: 4.5rem;
   }
 
+  .view_pdf_button2 {
+    height: 5.5rem;
+    width: 17rem;
+    margin-left: 4.5rem;
+  }
+
   #pdf_icon {
     height: 3rem;
     width: 3rem;
@@ -850,73 +887,3 @@ input[type="checkbox"] {
   }
 }
 
-/* ================================================================================================== */
-/* pdf viewerPart */
-* {
-  margin: 0px;
-}
-
-.top_bar {
-  background-color: white;
-  box-shadow: 0px 5px 10px rgb(212, 212, 212);
-  z-index: 1;
-  margin-top: 0px;
-  margin-left: 0;
-  margin-right: 0px;
-  width: 100%;
-  padding: 5px;
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.pg_btn {
-  background-color: blueviolet;
-  color: white;
-  font-weight: bold;
-  outline: none;
-  border: none;
-  width: 70px;
-  height: 30px;
-  padding: 2px;
-}
-.buttons {
-  margin-right: 20px;
-}
-.snedew_img {
-  max-width: 50px;
-  max-height: 50px;
-}
-.img_iocn {
-  max-width: 50px;
-  max-height: 50px;
-}
-#pdfRederer {
-  z-index: -1;
-  width: 100%;
-  max-width: fit-content;
-  overflow: scroll;
-}
-
-@media screen and (max-width: 500px) {
-  .top_bar {
-    box-shadow: 0px -5px 10px rgb(212, 212, 212);
-    margin-bottom: 0px;
-  }
-
-  .pg_btn {
-    width: 30px;
-    height: 20px;
-    padding: 2px;
-    font-size: 10px;
-  }
-}
-.pdf_viwer {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  overflow: scroll;
-  transition: 1s;
-  bottom: -100%;
-}

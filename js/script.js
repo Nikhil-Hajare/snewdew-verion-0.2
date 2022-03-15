@@ -97,7 +97,6 @@ window.onload = () => {
             }
         });
     }
-    load_doc()
 }
 
 function SwitchPage(tag) {
@@ -118,110 +117,18 @@ function SwitchPage(tag) {
     pdfUrl = data.pdf_url
 
     //Hide View Pdf Button
-    if (!data.isPDF) {
-        document.querySelector(".view_pdf_button").style.display = 'none'
+    if (!data.isPDF ) {
+        document.querySelector(".view_pdf_button").style.display = 'none'    
     }
     else {
         document.querySelector(".view_pdf_button").style.display = 'block'
+        document.querySelector(".view_pdf_button").innerHTML = '<a target="_blank" href="'+pdfUrl+'"><img id="pdf_icon" src="assets/Vector.svg" alt=""> View PDF</a>'
     }
-    load_doc()
 
 }
 
 
 
-//PDF Script===================================================================================================================================================================================================================
-
-let pdfDoc = null,
-    pageNum = 1,
-    pageIsRendering = false,
-    pageNumIsPending = null;
-
-const scale = 1.5,
-    canvas = document.querySelector('#pdfRederer'),
-    ctx = canvas.getContext('2d');
-
-// Render the page
-const renderPage = num => {
-    pageIsRendering = true;
-
-    // Get page
-    pdfDoc.getPage(num).then(page => {
-        // Set scale
-        const viewport = page.getViewport({ scale });
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-
-        const renderCtx = {
-            canvasContext: ctx,
-            viewport
-        };
-
-        page.render(renderCtx).promise.then(() => {
-            pageIsRendering = false;
-
-            if (pageNumIsPending !== null) {
-                renderPage(pageNumIsPending);
-                pageNumIsPending = null;
-            }
-        });
-
-        // Output current page
-        document.querySelector('#current_page').textContent = num;
-    });
-};
-
-// Check for pages rendering
-const queueRenderPage = num => {
-    if (pageIsRendering) {
-        pageNumIsPending = num;
-    } else {
-        renderPage(num);
-    }
-};
-
-// Show Prev Page
-const showPrevPage = () => {
-    if (pageNum <= 1) {
-        return;
-    }
-    pageNum--;
-    queueRenderPage(pageNum);
-};
-
-// Show Next Page
-const showNextPage = () => {
-    if (pageNum >= pdfDoc.numPages) {
-        return;
-    }
-    pageNum++;
-    queueRenderPage(pageNum);
-};
-
-// Get Document
-function load_doc() {
-    pdfjsLib
-        .getDocument(pdfUrl)
-        .promise.then(pdfDoc_ => {
-            pdfDoc = pdfDoc_;
-            document.querySelector('#total_pages').textContent = pdfDoc.numPages;
-            pageNum = 1
-            renderPage(pageNum);
-        })
-        .catch(err => {
-            // Display error
-            const div = document.createElement('div');
-            div.className = 'error';
-            div.appendChild(document.createTextNode(err.message));
-            document.querySelector('body').insertBefore(div, canvas);
-        });
-}
-// Button Events
-document.querySelector('#prev-page').addEventListener('click', showPrevPage);
-document.querySelector('#next-page').addEventListener('click', showNextPage);
-
-
-//
 function toggle_pdf_view() {
     if (pdf_on) {
         const viewer = document.querySelector('.pdf_viwer')

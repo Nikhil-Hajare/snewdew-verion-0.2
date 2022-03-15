@@ -379,7 +379,6 @@ header {
   display: none;
 }
 
-
 #flex_center_heading{
   color: #ffffff;
   font-size: 1.5vw;
@@ -401,13 +400,14 @@ header {
   margin: auto;
   margin-top: 5%;
   font-size: 1.1vw;
-  /* border: 1px solid red; */
 }
+
 .hero_content_innterContent_text ul li{
   list-style:disc;
   margin-left: 30px;
   padding-bottom: 1rem;
 }
+
 .hero_content_innterContent_text ul li ul li{
   list-style: circle;
   list-style-position: inside;
@@ -461,7 +461,6 @@ footer {
 
 #MIG{
   display: block;
-  /* float: left; */
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 900;

@@ -142,11 +142,11 @@ header {
   white-space: nowrap;
   padding-left: 100%;
   line-height: 7rem;
-  background: linear-gradient(90deg, #ff4d1d 2.89%, #4065ff 110.32%);
+  background: linear-gradient(90deg, #F48020 50.89%, #4065FF 100.32%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size:2rem;
-  font-weight: 900;
+  font-weight: 600;
   animation: marquee 10s linear infinite;
 }
 
@@ -225,24 +225,12 @@ header {
   cursor: pointer;
 }
 
-/* .item:hover{
-  background-color: #f48020;
-  color: #3e3e3e;
-  border-radius: 2rem;
-  font-size: 1.4rem;
-  color: #ffffff;
-  padding: 0.8rem 0 0 0;
-  transition: 0.2s ease-in;
-} */
-
 .selected_item {
   background-color: #4065ff;
   color: #ffffff;
   transition: 0.2s ease-in;
 }
-.selected_item:hover {
- 
-}
+
 #item-1 {
   flex: 2 2 45rem;
 }
@@ -314,6 +302,8 @@ header {
 
 .content {
   padding-bottom: 1.5rem;
+  border-radius: 5px 5px 5px 5px;
+  background-color: rgba(255, 255, 255, 0.658);
 }
 
 #hero_item1 {
@@ -330,8 +320,7 @@ header {
   font-size: 1.5rem;
   color: #ffffff;
   font-family: "Rajdhani", sans-serif;
-  font-style: bold;
-  font-weight: 500;
+  font-weight: 700;
   border: 1px solid rgba(0, 0, 0, 0.13);
   box-sizing: border-box;
   display: flex;
@@ -343,6 +332,7 @@ header {
   background: #3e3e3e;
   color: white;
   transition: 0.2s ease-in;
+  text-decoration: underline;
 }
 
 .sections_right {
@@ -353,8 +343,7 @@ header {
   text-align: right;
   color: #ffffff;
   font-family: "Rajdhani", sans-serif;
-  font-style: bold;
-  font-weight: 500;
+  font-weight: bolder;
   display: flex;
   cursor: pointer;
   align-items: center;
@@ -366,14 +355,17 @@ header {
   background: #3e3e3e;
   color: white;
   transition: 0.2s ease-in;
+  text-decoration: underline;
 }
 
 .selected_section {
   background-color: #3e3e3e;
   color: white;
+  text-decoration: underline;
+  transition: .5s;
 }
 .selected_section:hover {
-  background-color: #3e3e3e;
+  background-color: #252525;
   color: white;
 }
 #hero_item2 {
@@ -390,31 +382,40 @@ header {
 
 #flex_center_heading{
   color: #ffffff;
-  font-size: 1.7vw;
-  /* font-family: "Inter", sans-serif; */
+  font-size: 1.5vw;
   font-family: "Rajdhani", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   background-color: #4065ff;
   padding: 2rem;
-  line-height: 3rem;
 }
 
 .hero_content_innterContent_text{
   display: block;
   font-family: "Inter", sans-serif;
   font-style: normal;
-  font-weight: 550;
+  font-weight:400;
   width: 90%;
   margin: auto;
-  font-size: 1.2vw;
+  margin-top: 5%;
+  font-size: 1.1vw;
+}
+.hero_content_innterContent_text ul li{
+  list-style:disc;
+  margin-left: 30px;
+}
+.hero_content_innterContent_text ul li ul li{
+  list-style: circle;
+  list-style-position: inside;
+  font-style: italic;
 }
 
 .view_pdf_button {
-  height: 4rem;
-  width: 14rem;
-  margin-left: 4rem;
+  height: 4.5rem;
+  width: 15rem;
+  margin-left: 6rem;
+  margin-bottom: 8rem;
   font-family: "Inter", sans-serif;
   outline: none;
   border: none;
@@ -422,7 +423,6 @@ header {
   background-color: #4065ff;
   color: #ffffff;
   position: relative;
-  text-align: center;
   cursor: pointer;
 }
 
@@ -563,10 +563,10 @@ input[type="checkbox"] {
     line-height :8.5rem;
     
   }
-  #click:checked ~ .menu-btn i:before {
+  /* #click:checked ~ .menu-btn i:before {
     content: "\f00d";
     line-height :9.5rem;
-  }
+  } */
   nav ul {
     position: fixed;
     top: 14rem;
@@ -580,9 +580,9 @@ input[type="checkbox"] {
     transition: all 0.3s ease;
     z-index: 2;
   }
-  #click:checked ~ ul {
+  /* #click:checked ~ ul {
     left: 0;
-  }
+  } */
   nav ul li {
     width: 100%;
     margin:3vh 0;
@@ -678,9 +678,9 @@ input[type="checkbox"] {
     z-index: 3;
   }
 
-  [id^="btn"]:checked + ul {
+  /* [id^="btn"]:checked + ul {
     display: block;
-  }
+  } */
 
   .menu_li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.13);
@@ -707,16 +707,15 @@ input[type="checkbox"] {
   /* ================================================================================================== */
 /* media query for footer */
 footer {
+  width: 97%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 0.5rem 0.5rem 0 0;
   height: 5vh;
   position: fixed;
   z-index: 2;
   display: flex;
   align-items: center;
-  width: 97%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  border-radius: 0.5rem 0.5rem 0 0;
-}
 }
 #snewdew_email {
   display: none;
@@ -771,8 +770,9 @@ footer {
   }
 
   .view_pdf_button {
-    height: 5rem;
-    width: 16rem;
+    height: 5.5rem;
+    width: 17rem;
+    margin-left: 4.5rem;
   }
   
   #pdf_icon {
@@ -881,10 +881,10 @@ footer {
 
   }
   .pg_btn{
-  width: 20px;
-  height: 10px;
+  width: 30px;
+  height: 20px;
   padding: 2px;
-  font-weight: 5px;
+  font-size: 10px;
 }
 }
 .pdf_viwer{

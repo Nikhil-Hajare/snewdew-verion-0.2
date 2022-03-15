@@ -1,8 +1,10 @@
 let content_map = {};
 fetch('../assets/content_mapping.json').then(response => response.json())
     .then(json => content_map = json);
-var pdfUrl = '../paper.pdf'
+var pdfUrl = '../assets/pdfs/01  Science of Governance PDF for Website.pdf'
 var pdf_on = false
+let menu_on = false
+let dropDownOn = false
 window.onload = () => {
 
     //For Sections: 
@@ -24,18 +26,17 @@ window.onload = () => {
             const selected_nav = document.querySelector('.selected_item')
             if (selected_nav) {
                 selected_nav.classList.remove('selected_item')
-                console.log("Remove Nav Item Selector " + selected_nav.innerHTML)
             }
             SwitchPage(data);
         });
     }
 
-    // ====================================================
-
+    // For Mobile Dropdown 
     const mobile_side_sections = document.querySelectorAll('[side-section-mobile]');
-    console.log(mobile_side_sections)
+    ///New Line
+    const menu_div = document.querySelector('.menu')
     for (let i = 0; i < mobile_side_sections.length; i++) {
-        const data = mobile_side_sections[i].innerHTML 
+        const data = mobile_side_sections[i].innerHTML
 
         mobile_side_sections[i].addEventListener('click', () => {
             console.log(data)
@@ -43,6 +44,28 @@ window.onload = () => {
             current_selected = document.querySelector('.selected_section')
             const selected_mobile_section = document.querySelector('.dropdown_button')
             selected_mobile_section.innerHTML = data.toUpperCase() + '<span class="fas fa-caret-down"></span>'
+            menu_div.style.display = 'none'
+            SwitchPage(data);
+        });
+    }
+
+
+    // For Mobile Item nav 
+    const mobile_nav_item = document.querySelectorAll('[nav-item-mobile]');
+    ///New Line
+    const side_nav_div = document.querySelector('.mobile-side-nav')
+    for (let i = 0; i < mobile_nav_item.length; i++) {
+        const data = mobile_nav_item[i].innerHTML
+
+        mobile_nav_item[i].addEventListener('click', () => {
+            document.querySelector('.active').classList.remove('active')
+
+            mobile_nav_item[i].classList.add("active")
+            side_nav_div.style.left = '-100%'
+            document.querySelector('.menu_icon').classList.add("fa-bars");
+            document.querySelector('.menu_icon').innerHTML=''
+            document.querySelector('body').style.overflow = 'scroll';
+            document.querySelector(".check_box").checked = false
             SwitchPage(data);
         });
     }
@@ -56,7 +79,6 @@ window.onload = () => {
         const side_section = nav_items[i];
         const section_id_js = side_section.dataset.id;
         const data = side_section.innerHTML
-        console.log(section_id_js, side_section)
 
         side_section.addEventListener('click', () => {
             if (section_id_js < 8 && section_id_js > 1) {
@@ -70,18 +92,21 @@ window.onload = () => {
                 const selected_sec = document.querySelector('.selected_section')
                 if (selected_sec) {
                     selected_sec.classList.remove('selected_section')
-                    console.log("Remove Nav Item Selector " + selected_sec.innerHTML)
                 }
                 SwitchPage(data)
             }
         });
     }
+    load_doc()
 }
 
 function SwitchPage(tag) {
     tag = tag.trim().toLowerCase()
     const data = content_map[tag]
-    console.log(tag, data)
+
+    //setting backgroundImg
+    let imgUrl = "assets/bg_images/"+data.imgID+".png"
+    document.querySelector('#hero_item2').style.backgroundImage = 'url('+imgUrl+')'
 
     //setting main content
     const content_div = document.querySelector(".hero_content_innterContent_text")
@@ -179,9 +204,8 @@ function load_doc() {
         .getDocument(pdfUrl)
         .promise.then(pdfDoc_ => {
             pdfDoc = pdfDoc_;
-
             document.querySelector('#total_pages').textContent = pdfDoc.numPages;
-
+            pageNum = 1
             renderPage(pageNum);
         })
         .catch(err => {
@@ -190,8 +214,6 @@ function load_doc() {
             div.className = 'error';
             div.appendChild(document.createTextNode(err.message));
             document.querySelector('body').insertBefore(div, canvas);
-            // Remove top bar
-            // document.querySelector('.top-bar').style.display = 'none';
         });
 }
 // Button Events
@@ -215,15 +237,37 @@ function toggle_pdf_view() {
 
 
 // Mobile menu scroll off 
-let menu_on = false
 function disableScroll() {
-  if (!menu_on) {
-   document.body.style.overflow = 'hidden';
-   menu_on = true
-   console.log("false")
-  } else {
-   document.body.style.overflow = 'scroll';
-   menu_on = false
-   console.log("true")
-  }
- }
+    let menu_iocn = document.querySelector('.menu_icon')
+    if (!document.querySelector(".check_box").checked) {
+        document.body.style.overflow = 'hidden';
+        menu_on = true
+        document.querySelector(".mobile-side-nav").style.left='0px'
+        document.querySelector(".check_box").value = 'off'
+        menu_iocn.classList.remove('fa-bars')
+        document.querySelector('.menu').style.display = 'none'
+        menu_iocn.innerHTML = 'X'
+    } else {
+        document.body.style.overflow = 'scroll';
+        menu_on = false
+        menu_iocn.classList.add('fa-bars')
+        document.querySelector(".check_box").value = 'on'
+        menu_iocn.innerHTML = ''
+        document.querySelector(".mobile-side-nav").style.left='-100%'
+    }
+}
+
+
+//New Lines
+// For Showing Dropdown
+function showDropdown() {
+    if(dropDownOn){
+    document.querySelector('.menu').style.display = 'none'
+    dropDownOn = false
+        
+    }
+    else{
+    document.querySelector('.menu').style.display = 'block'
+    dropDownOn = true
+    }
+}

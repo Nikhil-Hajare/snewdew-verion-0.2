@@ -542,9 +542,6 @@ footer {
   display: none;
 }
 
-#responsive_mig {
-  display: none;
-}
 
 /* ================================================================================================== */
 /* navbar for mobile view  */
@@ -770,7 +767,7 @@ input[type="checkbox"] {
     display: none;
   }
 
-  #MIG {
+  #MIG{
     display: none;
   }
 
@@ -781,15 +778,6 @@ input[type="checkbox"] {
     width: 5vw;
     margin-left: 3rem;
     vertical-align: middle;
-    cursor: pointer;
-  }
-
-  #responsive_mig {
-    display: inline-block;
-    position: relative;
-    margin-left: 35vw;
-    max-height: 5.5vh;
-    max-width: 5vw;
     cursor: pointer;
   }
 

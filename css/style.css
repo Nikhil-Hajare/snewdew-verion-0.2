@@ -84,7 +84,7 @@ header {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:cover;
 }
 
 .founder_info {
@@ -220,7 +220,7 @@ header {
   text-align: center;
   font-family: "Inter", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: bold;
   color: #3e3e3e;
   cursor: pointer;
 }
@@ -389,6 +389,7 @@ header {
   text-transform: uppercase;
   background-color: #4065ff;
   padding: 2rem;
+  padding-left: 8rem;
 }
 
 .hero_content_innterContent_text{
@@ -396,14 +397,16 @@ header {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight:400;
-  width: 90%;
+  width: 80%;
   margin: auto;
   margin-top: 5%;
   font-size: 1.1vw;
+  /* border: 1px solid red; */
 }
 .hero_content_innterContent_text ul li{
   list-style:disc;
   margin-left: 30px;
+  padding-bottom: 1rem;
 }
 .hero_content_innterContent_text ul li ul li{
   list-style: circle;
@@ -414,7 +417,6 @@ header {
 .view_pdf_button {
   height: 4.5rem;
   width: 15rem;
-  margin-left: 6rem;
   margin-bottom: 8rem;
   font-family: "Inter", sans-serif;
   outline: none;
@@ -424,6 +426,7 @@ header {
   color: #ffffff;
   position: relative;
   cursor: pointer;
+  margin-left: 6vw;
 }
 
 #pdf_icon {
@@ -456,6 +459,32 @@ footer {
  
 }
 
+#MIG{
+  display: block;
+  /* float: left; */
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 3rem;
+  letter-spacing: -0.005em;
+  background-image: linear-gradient(
+    to right,
+    #d3af7a 0%,
+    #f6e27a 22%, 
+    #f6e27a 45%,
+    #f6f2c0 50%,
+    #f6e27a 55%,
+    #f6e27a 78%,
+    #d3af7a 100%
+    );
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: fixed;
+  left: 45%;
+}
+
 #snewdew_email {
   display: block;
   float: left;
@@ -467,7 +496,9 @@ footer {
   letter-spacing: -0.005em;
   color: #ffffff;
   margin-left: 1.5rem;
+ 
 }
+
 
 #snewdew_copyright {
   display: block;
@@ -484,6 +515,10 @@ footer {
 }
 
 #responsive_mail {
+  display: none;
+}
+
+#responsive_mig{
   display: none;
 }
 
@@ -697,10 +732,12 @@ input[type="checkbox"] {
 
   #flex_center_heading{
     font-size: 3vw;
+    padding-left: 4rem;
   }
   
   .hero_content_innterContent_text{
     font-size: 3.5vw;
+    width: 90%;
   }
 
 
@@ -722,9 +759,25 @@ footer {
   /* font-size: 5rem; */
 }
 
+#MIG{
+  display: none;
+}
+
 #responsive_mail {
   display: block;
   float: left;
+  height: 5vh;
+  width:5vw;
+  margin-left: 3rem;
+  vertical-align: middle;
+  cursor: pointer; 
+}
+
+#responsive_mig{
+  display: none;
+  position: fixed;
+  left:45%;
+  top: 0%;
   height: 5vh;
   width:5vw;
   margin-left: 3rem;

@@ -418,8 +418,8 @@ header {
 }
 
 .view_pdf_button {
-  height: 4.5rem;
-  width: 15rem;
+  height: 6vh;
+  width: 9vw;
   margin-bottom: 8rem;
   font-family: "Inter", sans-serif;
   outline: none;
@@ -431,6 +431,7 @@ header {
   cursor: pointer;
   margin-left: 6vw;
 }
+
 .view_pdf_button a{
   color: inherit;
   text-decoration: none;
@@ -817,14 +818,14 @@ input[type="checkbox"] {
   }
 
   .view_pdf_button {
-    height: 5.5rem;
-    width: 17rem;
+    height: 4vh;
+    width: 20vw;
     margin-left: 4.5rem;
   }
 
   .view_pdf_button2 {
-    height: 5.5rem;
-    width: 17rem;
+    height: 4vh;
+    width: 20vw;
     margin-left: 4.5rem;
   }
 
@@ -839,6 +840,18 @@ input[type="checkbox"] {
     margin-left: 0.5rem;
     font-size: 2rem;
   }
+}
+
+@media screen and (max-width: 500px){
+  .view_pdf_button {
+  height: 4vh;
+  width: 28vw;
+}
+
+ .view_pdf_button2 {
+  height: 4vh;
+  width: 28vw;
+}
 }
 
 @media screen and (min-height: 1148px) {
